@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hyperlinks</title>
+    </head>
+    <body>
+        <h1>Hyperlinks</h1>
+
+        <!-- by default, links are inline tags -->
+
+        <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/noopener -->
+        <!-- The window.opener property in web development is a reference that a new browser window (or tab) has to the window that opened it, allowing the new window to interact with the original one. The rel="noopener" attribute cuts off this reference, making window.opener null, which prevents the new window from manipulating or accessing the original window, thus enhancing security by blocking potential malicious attacks -->
+
+        <a href="http://www.google.com" rel="noopener">Absolute hyperlink (same tab)</a>
+
+        <br>
+
+        <a href="http://www.google.com" target="_blank" rel="noopener">Absolute hyperlink (new tab)</a>
+
+        <br>
+
+        <a href="01_Simple_HTML_Tags.html">Relative hyperlink (same tab)</a>
+
+        <br>
+
+        <a href="01_Simple_HTML_Tags.html" target="_blank">Relative hyperlink (new tab)</a>
+
+        <!-- links can also be placed around block level elements -->
+        <a href="01_Simple_HTML_Tags.html">
+            <p>This entire paragraph can be clicked! This entire paragraph can be clicked! This entire paragraph can be clicked! This entire paragraph can be clicked! This entire paragraph can be clicked!</p>
+        </a>
+        
+    </body>
+</html>

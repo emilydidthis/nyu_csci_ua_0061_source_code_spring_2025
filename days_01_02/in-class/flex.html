@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Flexbox</title>
+  </head>
+  <style>
+    /* ----- STYLING FOR THE DIVS -----   */
+    .flex-container {
+      border: 5px solid black;
+      width: 500px;
+      height: 500px;
+    }
+
+    .flex-item {
+      background-color: palevioletred;
+      border: 5px solid darkred;
+      width: 100px;
+      height: 100px;
+    }
+
+    /* ----- FLEXBOX IMPLEMENTATION -----   */
+    .flex-container {
+      display: flex;
+      flex-direction: row; /* defines the main axis */
+      justify-content: flex-start; /* main axis */
+
+      align-items: flex-start; /* cross axis*/
+      
+      /* flex-wrap: wrap;  */
+    }
+
+    .item-1{
+      align-self: center; /* overwrites the cross axis alignment */
+    }
+
+  </style>
+  <body>
+    <h1>FlexBox</h1>
+    <div class="flex-container">
+      <div class="flex-item item-1"> Item 1
+        <img src="asdfkja;sldfkj.jpg">
+        <p>Item 1 info</p>
+      </div>
+      <div class="flex-item item-2">Item 2</div>
+      <div class="flex-item item-3">Item 3</div>
+ 
+    </div>
+  </body>
+</html>

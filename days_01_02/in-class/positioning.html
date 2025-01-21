@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>CSS Positioning</title>
+        <meta charset="utf-8">
+        <style>
+            div {
+                border: 1px solid black;
+                width: 100px;
+                height: 100px;
+            }
+
+            #two{
+                position: relative; /* itself */
+                left: 20px;
+                top: 25px;
+            }
+
+            #three{
+                position: absolute; /* parent */
+                left: 300px;
+                top: 0px;
+            }
+            
+            #four{
+                position: fixed; /* browser */
+                bottom: 0px;
+                right: 0px;
+            }
+        </style>
+    
+    </head>
+    <body>
+        <h1>CSS Positioning</h1>
+        <div>1</div>
+        <div id="two">2</div>
+        <div id="three">3</div>
+        <div id="four">4</div>
+        <div>5</div>
+        <div>blah</div>
+        <div>blah</div>
+        <div>blah</div>
+        <div>blah</div>
+        <div>blah</div>
+        <div>blah</div>
+        <div>blah</div>
+        <div>blah</div>
+        <div>blah</div>
+        <div>blah</div>
+        <div>blah</div>
+        <div>blah</div>
+    </body>
+</html>
+
