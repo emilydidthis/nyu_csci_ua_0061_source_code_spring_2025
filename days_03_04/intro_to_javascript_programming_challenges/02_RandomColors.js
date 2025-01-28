@@ -7,3 +7,4 @@
 // rgb(24,25,26)
 
 // Output a div (give it the class colorBox) on the page that will use this color
+// emily's code
