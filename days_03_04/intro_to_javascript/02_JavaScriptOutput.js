@@ -7,9 +7,10 @@ alert("alert: hello, world!");
 // console.log writes a string of text to the JavaScript console (View -> Developer -> JavaScript Console in Chrome)
 console.log("console.log: hello, world!");
 
-/* 
+/*
 const a = "hey";
 const b = "there";
 const c = a + b;
 (a+b).toUpperCase();
 */
+
