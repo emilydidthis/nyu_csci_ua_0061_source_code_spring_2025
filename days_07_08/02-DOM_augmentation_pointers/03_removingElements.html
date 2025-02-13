@@ -22,15 +22,15 @@
       const c = document.querySelector('#c');
 
       // method #1: ask an element to remove itself from its parent
-      // a.remove();
+      a.remove();
 
       // method #2: ask the container to remove one of its children
       // to do this we have to provide a reference to the child
-      // container.removeChild(b);
+      container.removeChild(b);
 
       // note: the element MUST be a child of the parent in order
       // for this to succeed -- the following line will generate a runtime error
-      // container.removeChild(a); // a is no longer a child of the container
+      container.removeChild(a); // a is no longer a child of the container
 
     </script>
 
