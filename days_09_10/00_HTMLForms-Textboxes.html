@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>Working with the DOM</title>
+    <meta charset="utf-8">
+    <style type="text/css">
+      .output {
+        min-height: 1.0em;
+        background-color: #eee;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>HTML Forms</h1>
+    <!-- the 'form' tag is used to group form elements together
+         technically it is only required when you are planning on sending data to a server
+         but we will use it here to get in the habit for the 2nd half of the class! -->
+    <form>
+
+      <!-- the input tag is used to render a few different kinds of form fields.
+           the simplest is the 'text' unit which displays a textbox that
+           will allow the user to enter in a single line of text -->
+      <div>
+        Simple textbox: <input type="text" id="textbox1" name="textbox1">
+      </div>
+      <div>
+        Textbox with maxlength & default text: <input type="text" id="textbox2"  name="textbox2" value="Hello, asdfasdf!" maxlength="10">
+      </div>
+      <div>
+        Get the value of both textboxes and print them in the box below:
+        <button id="textboxbutton">Click to get value of boxes</button>
+        <div class="output"></div>
+      </div>
+
+    </form>
+
+    <script type="text/javascript">
+
+    </script>
+  </body>
+</html>

@@ -29,10 +29,9 @@
       // function that responds to this request to accept a single
       // argument named 'event'
       document.querySelector('#foo').onclick = function(event) {
-
         // the 'event' object contains a host of information about the
         // conditions that were detected that caused the event to fire
-        console.dir( event );
+        console.dir( event );   // currentTarget appears as null in the expanded view because DevTools displays event objects after they finish.
 
         // some interesting / useful properties of this object ...
 
@@ -47,7 +46,7 @@
         // currentTarget - a reference back to the element that caused
         // the event to fire.  not incredibly useful in this example but
         // we will use this to much greater effect in the next example
-        console.log(event.currentTarget);
+        console.log(event.currentTarget); // currentTarget is correct when logged normally.
 
       }
 
