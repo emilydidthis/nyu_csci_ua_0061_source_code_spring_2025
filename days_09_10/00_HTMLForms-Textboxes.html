@@ -36,6 +36,25 @@
     </form>
 
     <script type="text/javascript">
+      document.getElementById("textboxbutton").onclick = function(event){
+
+        event.preventDefault(); // stop the form from submitting itself 
+
+        let val1 = document.getElementById("textbox1").value;
+        let val2 = document.getElementById("textbox2").value;
+
+        console.log(event);
+        console.log("Current target:", event.currentTarget);
+        
+        // add the values to the div 
+        // document.getElementsByClassName("output")
+        console.log(event.currentTarget.nextElementSibling);
+        event.currentTarget.nextElementSibling.innerHTML = "";
+        event.currentTarget.nextElementSibling.innerHTML += val1;
+        event.currentTarget.nextElementSibling.innerHTML += "<br>";
+        event.currentTarget.nextElementSibling.innerHTML += val2;
+        event.currentTarget.nextElementSibling.innerHTML += "<br>";
+      }
 
     </script>
   </body>
