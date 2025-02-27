@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Challenge: Countdown to Blastoff!</title>
+    <style>
+      .hidden {
+        display: none;
+      }
+      #rocket {
+          width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Challenge: Countdown to Blastoff!</h1>
+    <!-- form interface -->
+    <select id="timeValue">
+      <option value="2">2</option>
+      <option value="5">5</option>
+      <option value="10">10</option>
+      <option value="15">15</option>
+    </select>
+    <button id="buttonBlastoff">Blastoff!</button>
+    <!-- div where the countdown should appear -->
+    <div id="countdown"></div>
+    <!-- rocket ship graphic -->
+    <img id="rocket" src="images/rocket.png" class="hidden" />
+    <!-- write your answer here -->
+    <script>
+        // Allow the user to select a time value
+
+        // When the user clicks on the "Launch" button you should "count down" from the selected value to 0, with each value appearing one second apart. For example, if the user selects the value 5 your program should display 5, 4, 3, 2, 1 and 0 over the course of 5 seconds.  Display these values in the "countdown" div.
+
+        // When the value 0 is reached display the rocket ship graphic (it has a class of hidden, so you will need to remove this to display it)
+
+        // Do not allow the user to continually "spam" the countdown button.  You cannot make the countdown button invisible to solve this part of the challenge.
+
+        // some DOM queries to get you started
+        const timeValue = document.getElementById('timeValue');
+        const countdown = document.getElementById('countdown');
+        const buttonBlastoff = document.getElementById('buttonBlastoff');
+        const rocket = document.getElementById('rocket');
+
+        let counter;
+        let intervalId;
+
+        // when the user clicks on the button
+        buttonBlastoff.onclick = function(e) {
+          // make sure that the rocket is hidden
+          rocket.classList.add("hidden");
+          // empty my countdown
+          countdown.innerHTML = "";
+          
+          counter = parseInt(timeValue.value);
+          countdown.innerHTML += `${counter}<br>`;
+
+          // decrement my counter every second
+          intervalId = setInterval(function(){
+              // decrease my counter
+              counter--;
+              // update the countdown div with the current value
+              countdown.innerHTML += `${counter}<br>`;
+
+              if (counter == 0){
+                //show the rocket
+                rocket.classList.remove("hidden");
+                // stop the interval from running
+                clearInterval(intervalId);
+              }
+          }
+          , 1000);
+        }
+    </script>
+  </body>
+</html>

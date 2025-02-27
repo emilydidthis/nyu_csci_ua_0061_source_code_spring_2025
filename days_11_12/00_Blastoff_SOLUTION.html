@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Challenge: Countdown to Blastoff!</title>
+    <style>
+      .hidden {
+        display: none;
+      }
+      #rocket {
+          width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Challenge: Countdown to Blastoff!</h1>
+    <!-- form interface -->
+    <select id="timeValue">
+      <option value="2">2</option>
+      <option value="5">5</option>
+      <option value="10">10</option>
+      <option value="15">15</option>
+    </select>
+    <button id="buttonBlastoff">Blastoff!</button>
+    <!-- div where the countdown should appear -->
+    <div id="countdown"></div>
+    <!-- rocket ship graphic -->
+    <img id="rocket" src="images/rocket.png" class="hidden" />
+    <!-- write your answer here -->
+    <script>
+      // some DOM queries to get you started
+      const timeValue = document.getElementById("timeValue");
+      const countdown = document.getElementById("countdown");
+      const buttonBlastoff = document.getElementById("buttonBlastoff");
+      const rocket = document.getElementById("rocket");
+      // global variable to keep track of interval ID
+      let intervalId = false;
+      // global variable to keep track of our counter
+      let counter = false;
+      // when the user clicks on the button
+      buttonBlastoff.onclick = function (e) {
+        // make sure the intervalId is not currently being used
+        if (!intervalId) {
+          // hide the rocket (if it is currently visible)
+          rocket.classList.add("hidden");
+          // compute the max value for our counter
+          counter = parseInt(timeValue.value);
+          // update the countdown div with our max value
+          countdown.innerHTML = `${counter}<br>`;
+          // set up an interval to run every 1 second
+          intervalId = setInterval(function () {
+            // decrease counter
+            counter--;
+            // update the countdown div with our current value
+            countdown.innerHTML += `${counter}<br>`;
+            // have we reached 0?
+            if (counter == 0) {
+              // clear our interval
+              clearInterval(intervalId);
+              // show the rocket
+              rocket.classList.remove("hidden");
+              // reset the interval to allow the user to click on the button again
+
+              intervalId = false;
+            }
+          }, 1000);
+        }
+      };
+    </script>
+  </body>
+</html>
