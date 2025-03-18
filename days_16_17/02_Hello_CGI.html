@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Hello, CGI</title>
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+    <h1>Hello, CGI</h1>
+    <!--
+        the 'action' property of the 'form' tag tells the browser where to send
+            the data contained within the form when the user clicks on a button
+        the 'method' property of the 'form' tag denotes how the data should be sent
+            the two options are POST and GET.
+            GET requests send the data through the URL - less data can be sent with GET requests, and they are clearly visible to the user
+            POST requests send the data through a series of separate packets - more data can be sent with POST requests, and the data is invisible to the user
+    -->
+    <form id="form" action="02_Hello_CGI.php" method="POST">
+      Number 1: <input type="text" name="num1"><br>
+      Number 2: <input type="text" name="num2"><br>
+      Color: <input type="text" id="color" name="color"><br>
+      <!-- <button type="button" id="button">Submit</button> -->
+      <input type="submit" value="Submit">
+    </form>
+
+    <!-- To prevent the form submission when the button is clicked
+          - You can use event.preventDefault()
+          - You can change the type attribute of the button from "submit" (the default) to "button". This change ensures that clicking the button won't trigger form submission.
+    -->
+
+    <script>
+      // Adding event listener on the button
+      // document.getElementById("button").addEventListener("click", function(event){
+      //   // set the body color to the color inputted on form
+      //   event.preventDefault();
+      //   document.querySelector("body").style.backgroundColor = document.getElementById("color").value;
+      // })
+
+   
+      // Vs. Adding event listener on the form
+      // document.getElementById("form").addEventListener("submit", function(event){
+      //   // set the body color to the color inputted on form
+      //   //event.preventDefault();
+      //   document.querySelector("body").style.backgroundColor = document.getElementById("color").value;
+      // })
+    </script>
+  </body>
+</html>
