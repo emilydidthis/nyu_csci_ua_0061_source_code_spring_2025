@@ -1,0 +1,6 @@
+squirtle,blue
+Emily,purple
+Peter,blue
+Peter,blue
+emily,yellow
+Emily,pink

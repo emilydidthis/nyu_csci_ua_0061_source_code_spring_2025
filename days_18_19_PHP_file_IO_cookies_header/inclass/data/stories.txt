@@ -1,0 +1,8 @@
+Emily,yellow
+Bob,black
+Stacy,red
+Linus,green
+Penelope,gray
+Name,white
+new,purple
+tom,orange
